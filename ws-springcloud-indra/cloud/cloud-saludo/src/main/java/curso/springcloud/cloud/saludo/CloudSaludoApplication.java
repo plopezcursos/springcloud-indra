@@ -1,13 +1,13 @@
-package curso.springcloud.cloud;
+package curso.springcloud.cloud.saludo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CloudApplication {
+public class CloudSaludoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CloudApplication.class, args);
+		SpringApplication.run(CloudSaludoApplication.class, args);
 	}
 
 }
