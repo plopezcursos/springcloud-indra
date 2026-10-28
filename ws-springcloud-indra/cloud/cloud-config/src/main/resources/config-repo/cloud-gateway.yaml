@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            - id: ruta-saludo
+              uri: lb://cloud-saludo
+              predicates:
+                - Path=/api/saludo/**
+            - id: ruta-consulta
+              uri: lb://cloud-consulta
+              predicates:
+                - Path=/api/consulta/**
