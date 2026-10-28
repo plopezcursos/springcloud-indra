@@ -1,9 +1,18 @@
 package es.formacion.cursoindra.cliente.domain;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.PrimaryKeyJoinColumn;
+import jakarta.persistence.Table;
+
 @SuppressWarnings("serial")
 
+@Entity
+@Table(name="clientes")
+@PrimaryKeyJoinColumn(name = "id_cliente", referencedColumnName = "id_persona")
 public class Cliente extends PersonaFisica {
 	
+	@Column(name="nrocliente")
 	private Integer nroCliente;
 	
 	public Cliente() {

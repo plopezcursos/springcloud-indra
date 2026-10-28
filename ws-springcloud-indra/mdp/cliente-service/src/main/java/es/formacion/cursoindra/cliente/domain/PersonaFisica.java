@@ -6,15 +6,34 @@ import java.util.Comparator;
 import java.util.Locale;
 import java.util.Objects;
 
-@SuppressWarnings("serial")
+import org.hibernate.annotations.Collate;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
+import jakarta.persistence.Table;
+
+@SuppressWarnings("serial")
+@Entity
+@Table(name="personas")
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class PersonaFisica implements Serializable, Comparable<PersonaFisica> {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_persona")
 	Integer idPersona;
 	String nombre;
 	String apellido1;
 	String apellido2;
 	String nif;
+	@Enumerated(EnumType.STRING)
 	Genero sexo;
 	String municipio;
 	String provincia;

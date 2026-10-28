@@ -1,5 +1,10 @@
 spring:
   application:
     name: cliente-service
+  datasource:
+    url: jdbc:mysql://localhost:3307/clientes_db
+    username: root
+    password: root
 server:
   port: 8081
+  
