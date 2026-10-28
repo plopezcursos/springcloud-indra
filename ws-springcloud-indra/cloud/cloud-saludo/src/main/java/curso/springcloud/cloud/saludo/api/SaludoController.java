@@ -14,4 +14,10 @@ public class SaludoController {
 	public String saludar() {
 		return "Respuesta de: " + instancia;
 	}
+	
+	@GetMapping("/api/saludo/demora")
+	public String saludarDemora() throws InterruptedException {
+		Thread.sleep(2500);
+		return "Respuesta con Demora de: " + instancia;
+	}
 }

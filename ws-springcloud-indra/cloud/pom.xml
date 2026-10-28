@@ -17,6 +17,7 @@
 		<module>cloud-eureka</module>
 		<module>cloud-saludo</module>
 		<module>cloud-consulta</module>
+		<module>cloud-config</module>
 	</modules>
 	<properties>
 		<java.version>21</java.version>
